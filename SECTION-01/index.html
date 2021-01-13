@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sección 1 - Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div class="vue">
+        <span>{{mensaje}}</span> <br>
+        <span>{{mostrarMensaje()}}</span> <br>
+        <img v-bind:src="src">
+        <br>
+        <br>
+        <!--Computed Properties-->
+        <button v-on:click="primero++">Incrementar primero</button>
+        <button v-on:click="segundo++">Incrementar segundo</button>
+        <button v-on:click="tercero++">Incrementar tercero</button>
+        <button v-on:click="cuarto++">Incrementar cuarto</button>
+        <p>Primero: {{ primero }}</p>
+        <p>Segundo: {{ segundo }}</p>
+        <p>Tercero: {{ tercero }}</p>
+        <p>Cuarto: {{ cuarto }}</p>
+        <p>Total: {{ total }}</p>
+        <br>
+        <!--Enlace de datos doble-->
+        <input type="text" v-model="nombre">
+        Welcome {{ nombre }} a Vue.js
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>
