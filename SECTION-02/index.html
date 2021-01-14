@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sección 1 - Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div class="vue">
+        <!--Enlace de datos v-bind-->
+        <img v-bind:src="imagen">
+        <img :src="imagen">
+
+        <!--Muestra el texto dentro de una propiedad v-text-->
+        <h3 v-text="texto"></h3>
+
+        <!--Muestra cadenas de HTML dentro del contenido v-html-->
+        <div v-html="etiqueta"></div>
+
+        <!--Condicionales v-if, v-else-->
+        <div v-if="mostrar">
+            <p>Hello!</p>
+            Este es el primer condicional
+        </div>
+        <div v-else>Este es el segundo condicional</div>
+
+        <!--Etiqueta template-->
+        <template v-if="mostrar">
+            <h5>Hello! world!</h5>
+            Etiqueta template
+        </template>
+        <br><br><br>
+
+        <!--v-else-if-->
+        <div v-if="op == 1">Suma</div>
+        <div v-else-if="op == 2">Resta</div>
+        <div v-else-if="op == 3">Multiplicar</div>
+        <div v-else="op == 4">Ninguna de las anteriores</div>
+        <br><br>
+
+        <!-- v-show - Esconde del DOM con CSS -->
+        <div v-show="hidden">
+            Oculta del DOM con CSS
+        </div>
+        <div>No oculta</div>
+
+        <!--v-for -->
+        <ul>
+            <li v-for="pais in paises">
+                {{pais}}
+            </li>
+        </ul>
+        <!--v-for con JSON-->
+        <ul>
+            <li v-for="country in countries">
+                {{country.name}}
+            </li>
+        </ul>
+        <br>
+
+        <!--v-for índice del elemento -->
+        <!--v-for etiqueta 'template' -->
+        <p>Utilizando la etiqueta 'template'</p>
+        <ul>
+            <template v-for="pais,indice in paises">
+                <li>
+                    {{indice + 1}}-{{pais}}
+                </li>
+                <hr />
+            </template>
+        </ul>
+
+        <!--v-for con objetos -->
+        <ul>
+            <li v-for="value in employee">
+                {{value}}
+            </li>
+        </ul>
+        <hr />
+        <p>Con su respectiva llave</p>
+        <ul>
+            <li v-for="(value, key) in employee">
+                {{key}} -- {{value}}
+            </li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>
