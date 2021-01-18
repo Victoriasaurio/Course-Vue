@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sección 1 - Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div class="vue">
+        <button v-on:click="sumarUno">Sumar uno</button>
+        <button v-on:click="restarUno">Restar uno</button>
+        <hr>
+        {{ contador }}
+        <br><br>
+        <!--Suma cuando el mouse se posiciona sobre el botón -->
+        <button v-on:mouseEnter="sumar2Uno">sumar uno</button>
+        <hr>
+        {{ contador2 }}
+        <br><br>
+
+        <!--Pasa de parámetros en los eventos-->
+        <button v-on:click="alerta('This is the alert')">show alert</button>
+
+        <br><br>
+        <!--Coordenadas en los ejes X y Y al mover el mouse - Eventos -->
+        <div 
+            style="height:300px;border:1px solid blue" 
+            v-on:mousemove="mostrarUbicacion"
+            v-on:click="contador4++"
+        ></div>
+        x: {{x}}, y: {{y}} - {{ contador3 }} - {{ contador4 }}
+        <!--v-on:click="sumarOne(3)"-->
+        <!--Eventos - Javascript sencillo
+        Como se muestra en los ejemplos de contador 3 y 4-->
+        <br><br>
+
+
+        <!--Modificadores de eventos-->
+        <div 
+            style="height:300px;border:1px solid red" 
+            v-on:mousemove="mostrarUbicacion"
+            v-on:click.once="sumarOne(3)"
+        >
+            <div style="height:30px;border:1px solid yellow" 
+            v-on:mousemove.stop></div>
+        </div>
+        x: {{x}}, y: {{y}} - {{ contador3 }}
+
+        <!-- .once - Ejecuta una sola vez el evento 
+             .stop - únicamente permite la actualización de las coordenadas en el cuadro red, excluyendo el yellow
+        -->
+
+        <!--Escuchar eventos del teclado-->
+        <input type="text" @keyup.alt.67="sumarOne(1)">
+        <!--
+            v-on:keyup - Incrementa el contador al presionar las teclas.
+            v-on:keyup.delete
+            v-on:keyup.space
+            v-on:keyup.alt.67 - Incrementa al presionar alt+c
+        -->
+
+
+        <!--Forma corta de la directiva v-on -->
+        <!-- Es igual escribir v-on:keyup.alt.67="sumar() === @keyup.alt.67="sumar()" --> 
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>
