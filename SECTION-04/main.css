@@ -1,0 +1,8 @@
+.check {
+    padding-right: 5px;
+    float: right;
+}
+.finished {
+    color: gray;
+    text-decoration: line-through;
+}
