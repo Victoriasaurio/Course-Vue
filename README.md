@@ -6,3 +6,4 @@ Basic course of Vue.js
 - Section 3: Events
 - Section 4: Tasks list app
 - Section 5: Components for Tasks list app
+- Section 6: Vue-cli - Tasks list app
