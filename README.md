@@ -9,7 +9,10 @@ Basic course of Vue.js
 - Section 6: Vue-cli - Tasks list app
 - Section 7: Slots
     + keep-alive
-    + Ciclos de vida
+    + Lifecycles
         - destroyed
         - activated
         - deactivated
+- Section 8: Custom Policies
+    + global policies
+    + local policies
