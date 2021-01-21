@@ -16,3 +16,5 @@ Basic course of Vue.js
 - Section 8: Custom Policies
     + global policies
     + local policies
+- Section 9: Forms in vue
+    + [Form in vue](https://github.com/Victoriasaurio/forms-in-vue)
