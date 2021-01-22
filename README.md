@@ -18,3 +18,6 @@ Basic course of Vue.js
     + local policies
 - Section 9: Forms in vue
     + [Form in vue](https://github.com/Victoriasaurio/forms-in-vue)
+- Section 10: Filters
+    + Local filters
+    + Global filters
