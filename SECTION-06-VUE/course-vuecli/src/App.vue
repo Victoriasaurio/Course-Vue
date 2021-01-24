@@ -22,6 +22,8 @@ import Titulo from './components/title-list';
 import newTask from './components/newtask';
 import TaskList from './components/tasklist';
 
+require('dotenv').config()
+
 export default {
   name: 'App',
   components: {
@@ -34,21 +36,25 @@ export default {
       titulo: 'Task list',
       numTask: 3,
       numTaskOther: 3,
-      tasks: [
-        {
-          text: 'Learn Vue.js',
-          finished: false
-        },
-        {
-          text: 'Learn Angular 2',
-          finished: false
-        },
-        {
-          text: 'Learn Ionic 2',
-          finished: false
-        }
-      ],
+      tasks: [],
     }
+  },
+  created() {
+    this.$http.get(process.env.VUE_APP_URL_CONECTION + '.json') // Dentro de comillas debe ir la URL de nuestra base de datos
+              .then(res => {
+                return res.json()
+              })
+              .then(resJson => {
+                console.log(resJson)
+                for(let id in resJson) {
+                  let task = {
+                    id: id,
+                    text: resJson[id].text,
+                    finished: resJson[id].finished
+                  }
+                  this.tasks.push(task)
+                }
+              })
   },
   methods: { // Otra forma de comunicar los componentes (2) función que se usa como propiedad
     updateContador() {

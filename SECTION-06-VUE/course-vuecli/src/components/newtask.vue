@@ -20,6 +20,8 @@
 <script>
 import { bus } from '../main.js'
 
+require('dotenv').config()
+
 export default {
     name: 'newTask',
     data() {
@@ -44,6 +46,14 @@ export default {
                 bus.updateContador(this.tasks.length) //Método del bus que son comunes
             }
             this.newTask = ''; //Limpia 
+            // Para la conexión a la DB en Firebase se debe otorgar un <nameDB> y terminar en .json.
+            this.$http.post(process.env.VUE_APP_URL_CONECTION + '.json', {
+                text: text,
+                finished: false
+            })
+            .then(res => {
+                console.log(res)
+            })
         },
     }, 
     //Función qur toma los valores(longitud lista tareas) de la lista son declarlos manualmente
