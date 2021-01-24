@@ -21,3 +21,6 @@ Basic course of Vue.js
 - Section 10: Filters
     + Local filters
     + Global filters
+- Section 11: HTTP Calls 
+    + Conection with Firebase database 
+    + GET, POST, PATCH
