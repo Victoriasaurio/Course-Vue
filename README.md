@@ -24,3 +24,6 @@ Basic course of Vue.js
 - Section 11: HTTP Calls 
     + Conection with Firebase database 
     + GET, POST, PATCH
+- Section 12: Routing
+    + Aplicación de página simple
+        + Uso de vue-router
