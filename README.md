@@ -27,3 +27,5 @@ Basic course of Vue.js
 - Section 12: Routing
     + Aplicación de página simple
         + Uso de vue-router
+        + Uso de vue-resource
+        + tag <router-link>
