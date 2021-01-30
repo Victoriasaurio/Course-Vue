@@ -28,4 +28,12 @@ Basic course of Vue.js
     + Aplicación de página simple
         + Uso de vue-router
         + Uso de vue-resource
-        + tag <router-link>
+        + tag `<router-link>`
+- Section 13: Production
+    + Apache server
+        + Ejecutar `npm run build`
+        + Copiar el archivo `index.html` y la carpeta `dist`
+        + Vericar la ruta del archivo index.html que se encuentre en la raíz. Dependiendo de si existe un folder antes que el index.html.
+        + Realizar las configuraciones necesarias en .htaccess
+    + AWS
+        
